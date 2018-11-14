@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movies</title>
+    <link rel="stylesheet" type="text/css"href="../css/CSS.css">
+
+    <script>
+    function GetYear(){
+      var UserYearOfBirth = document.getElementById('birthyear');
+      if(UserYearOfBirth.value == "")
+        alert("you need to write birth year");
+      else if(UserYearOfBirth.value<2004){
+        open("OverThanAge13.html"); }
+      else{
+        open("LessThanAge13.html"); }}
+   </script>
+  </head>
+  <body id="t1">
+    <form action='' method="post">
+    <h1>Welcome To Movie Gallery</h1>
+      <section>
+        You can choose any movie you like from the movie list,<br>
+        but first you need to enter your birth year.<br>
+        after this step you get a list of movies with appropriate page.<br>
+        you can choose the movie you want and see his details.
+      </section>
+      <p>
+         <label for="birthyear">
+         <span>birth year</span>
+         <input type="text" id="birthyear" placeholder="enter your birth year" pattern=".{4,}"
+              required title="enter 4 digits"/>
+         <strong><abbr title="required">*</abbr></strong>
+         </label>
+       </form>
+       </p>
+      <button id="continue" onclick="GetYear()">Continue</button>
+
+      </body>
+
+</html>
